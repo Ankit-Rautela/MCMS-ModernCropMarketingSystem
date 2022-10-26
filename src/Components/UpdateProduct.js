@@ -12,19 +12,19 @@ const UpdateProduct = () => {
     const params = useParams();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        getProductDetail();
-    },[])
+//     useEffect(() => {
+//         getProductDetail();
+//     },[])
 
-    const getProductDetail = async () => {
-        console.warn(params)
-        let result = await fetch(`http://localhost:5000/product/${params.id}`);
-        result = await result.json();
-        setName(result.name);
-        setPrice(result.price);
-        setCategory(result.category);
-        setOwner(result.owner);
-    }
+//     const getProductDetail = async () => {
+//         console.warn(params)
+//         let result = await fetch(`http://localhost:5000/product/${params.id}`);
+//         result = await result.json();
+//         setName(result.name);
+//         setPrice(result.price);
+//         setCategory(result.category);
+//         setOwner(result.owner);
+//     }
 
     const updateProduct = async () => {
         let result = await fetch(`http://localhost:5000/product/${params.id}`,{
